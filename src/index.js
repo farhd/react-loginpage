@@ -1,10 +1,11 @@
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/font-awesome/css/font-awesome.min.css';
+
 import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { configureStore } from './store/configureStore';
 import Root from './containers/Root';
-
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const store = configureStore();
 

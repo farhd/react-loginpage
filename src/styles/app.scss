@@ -1,3 +1,7 @@
+.app {
+  font-size: 14px;
+}
+
 .t-center {
 	text-align: center;
 }
@@ -5,45 +9,6 @@
 .bg {
   background: transparent url('../static/img/login_background.jpg') no-repeat center;
   background-size: cover;
-}
-
-.header {
-  background: #2c577d;
-  border-radius: 0px;
-  box-shadow:
-    0px 1px 3px 1px rgba(46, 46, 46, 0.3),
-    inset rgba(255, 255, 255, 0.2) 0 1px 1px;
-  border: 0;
-  margin-bottom: 0;
-
-  > :global(.container) {
-    width: auto;
-  }
-
-  .nav__form {
-    margin: 5px;
-  }
-
-  .nav__search {
-    width: 350px;
-    font-size: 15px;
-    font-family: "Helvetica Neue", Helvetica, Arial;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15), 0 2px 4px rgba(0, 0, 0, 0.2) inset, 0 0 12px rgba(255, 255, 255, 0.1);
-    background: rgba(35, 70, 106, 0.6);
-    padding: 7px 35px 6px 10px;
-    border-radius: 4px;
-    border: 0;
-    color: #fff;
-    margin-top: 3px;
-  }
-}
-
-.logo {
-  padding: 10px;
-
-  &__img {
-    height: 30px;
-  }
 }
 
 .intercom-icon {

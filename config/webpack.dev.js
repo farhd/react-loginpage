@@ -64,7 +64,10 @@ module.exports = {
 			},
 			{
         test: /\.css$/,
-        include: [/bootstrap/],
+        include: [
+					/bootstrap/,
+					/font-awesome/,
+				],
 				loaders: [
 					'style-loader?sourceMap',
 					'css-loader?modules=false',
@@ -73,7 +76,10 @@ module.exports = {
 			},
 			{
         test: /\.css$/,
-        exclude: [/bootstrap/],
+        exclude: [
+					/bootstrap/,
+					/font-awesome/,
+				],
 				loaders: [
 					'style-loader?sourceMap',
 					'css-loader?modules=true&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
