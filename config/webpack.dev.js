@@ -19,6 +19,11 @@ module.exports = {
 		filename: '[name].js',
 		publicPath: '/'
 	},
+  devServer: {
+    historyApiFallback: true,
+    contentBase: './',
+    hot: true
+  },
 	plugins: [
 		new webpack.NamedModulesPlugin(),
 		new HtmlWebpackPlugin({

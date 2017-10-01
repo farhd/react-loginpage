@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { resetQuestions } from '../actions';
 
-import * as picnic from 'picnic';
-
 class Result extends Component {
 	static propTypes = {
 		resetQuestions: PropTypes.func.isRequired,
@@ -26,22 +24,21 @@ class Result extends Component {
 	render() {
 		const { correct, answered } = this.props.result;
 		return (
-			<div className={`${picnic.flex} ${picnic.one} ${picnic.center}`}>
+			<div >
 				<strong>Result:</strong>
 				<div>Correct: {correct}</div>
 				<div>Answered: {answered}</div>
 
-				<div className={`${picnic.flex} ${picnic['four-700']} ${picnic.center}`}>
+				<div >
 					<Link
 						to="/"
-						onClick={this.handleReset.bind(this)}
-						className={picnic.button}>
+						onClick={this.handleReset.bind(this)}>
 						Try again
 					</Link>
 
-					<span className={`${picnic.flex} ${picnic['half-700']} ${picnic.center}`}>or</span>
+					<span >or</span>
 
-					<Link to="/" className={picnic.button}>
+					<Link to="/" >
 						Review answers
 					</Link>
 				</div>
