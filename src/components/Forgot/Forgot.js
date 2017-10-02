@@ -57,7 +57,7 @@ export default class Forgot extends Component {
 						/>
 					</FormGroup>
 
-					<Link to="/">Back</Link>
+					<Link to="/login">Back</Link>
 					<Button type="submit" bsStyle="primary" className="pull-right">Reset your password</Button>
 				</form>
 			</Dialog>

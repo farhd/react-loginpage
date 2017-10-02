@@ -24,16 +24,15 @@ export default class Login extends Component {
 			}
 		};
 
-		this.handleChangeEmail = this.handleChangeEmail.bind(this);
-		this.handleChangePass = this.handleChangePass.bind(this);
+		this.handleInput = this.handleInput.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
-	handleTextInput(e) {
+	handleInput(e) {
 		this.setState({
 			payload: {
 				...this.state.payload,
-				[e.target.controlId]: e.target.value,
+				[e.target.id]: e.target.value,
 			}
 		});
 	}
@@ -64,7 +63,7 @@ export default class Login extends Component {
 							type="email"
 							placeholder="john.d@domain.com"
 							required
-							onChange={this.handleChangeEmail}
+							onChange={this.handleInput}
 						/>
 					</FormGroup>
 
@@ -78,7 +77,7 @@ export default class Login extends Component {
 							type="password"
 							placeholder="********"
 							required
-							onChange={this.handleChange}
+							onChange={this.handleInput}
 						/>
 						<Link to="/forgot" className={utilStyle.weight__light + ' ' + 'pull-right'}>Forgot your password?</Link>
 					</FormGroup>

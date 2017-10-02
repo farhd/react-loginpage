@@ -1,11 +1,12 @@
 // import PropTypes from 'prop-types';
 import React, { Component }  from 'react';
 import { connect } from 'react-redux';
-// import {
-// 	Route,
-// 	Redirect,
-// 	Switch
-// } from 'react-router-dom';
+import {
+	Route,
+	Redirect,
+	Switch,
+	Fade
+} from 'react-router-dom';
 import {
 	Col
 } from 'react-bootstrap';
@@ -20,10 +21,7 @@ import Forgot from '../../components/Forgot/Forgot';
 import * as utilStyle from '../../styles/utils.scss';
 import * as style from './style.scss';
 
-export class Main extends Component {
-	static propTypes = {
-	};
-
+export default class Main extends Component {
 	constructor() {
 		super();
 	}
@@ -36,7 +34,12 @@ export class Main extends Component {
 						<Col xs={12} sm={8} smOffset={2} md={6} mdOffset={3}
 							className={style.control + ' ' + utilStyle['z-depth-1']}>
 
-							<Forgot />
+							<Redirect to="/login" />
+							<Switch>
+								<Route path="/login" component={Login} />
+								<Route path="/register" component={Register} />
+								<Route path="/forgot" component={Forgot} />
+							</Switch>
 
 						</Col>
 					</div>
@@ -45,12 +48,3 @@ export class Main extends Component {
 		);
 	}
 }
-
-const mapStateToProps = (state) => {
-	return {
-		...state
-	};
-};
-
-export default connect( mapStateToProps, {
-} )(Main);
