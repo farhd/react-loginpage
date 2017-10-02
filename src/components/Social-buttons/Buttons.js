@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import React from 'react';
 import {
 	Link,
@@ -9,14 +9,14 @@ import {
 import Icon from 'react-fontawesome';
 import style from './style.scss';
 
-const Login = () => {
+const Login = ({actionVerb = 'Log in'}) => {
 	return (
 		<div>
 			<div>
 				<Button bsSize="md" block
 					className={style.social__btn + ' ' + style.google}>
 					<Icon name="google" className={style.social__icon} />
-					Signup with Google
+					{actionVerb} with Google
 				</Button>
 			</div>
 
@@ -24,7 +24,7 @@ const Login = () => {
 				<Button bsSize="md" block
 					className={style.social__btn + ' ' + style.linkedin}>
 					<Icon name="linkedin" className={style.social__icon} />
-					Signup with Linkedin
+					{actionVerb} with Linkedin
 				</Button>
 			</div>
 
@@ -32,7 +32,7 @@ const Login = () => {
 				<Button bsSize="md" block
 					className={style.social__btn + ' ' + style.xing}>
 					<Icon name="xing" className={style.social__icon} />
-					Signup with Xing
+					{actionVerb} with Xing
 				</Button>
 			</div>
 		</div>
@@ -40,6 +40,7 @@ const Login = () => {
 };
 
 Login.propTypes = {
+  actionVerb: PropTypes.string
 };
 
 export default Login;

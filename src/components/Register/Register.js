@@ -1,18 +1,20 @@
 // import PropTypes from 'prop-types';
 import React from 'react';
-import {
-	Link,
-} from 'react-router-dom';
+import Dialog from '../Dialog/Dialog';
+import SocialButtons from '../Social-buttons/Buttons';
+import Separator from '../Separator/Separator';
 
 const Register = () => {
 	return (
-		<h3>
-			Register
-			<span className="switch pull-right">
-        Already have an account?
-				<Link to="/login">Log in</Link>
-			</span>
-		</h3>
+		<Dialog
+			headerText="Register"
+			switchText="Already have an account?&nbsp;"
+			switchLinkPath="/login"
+			switchLinkText="Log in"
+		>
+			<SocialButtons actionVerb="Register" />
+			<Separator title="or" />
+		</Dialog>
 	);
 };
 
