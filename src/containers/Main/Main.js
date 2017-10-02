@@ -12,6 +12,7 @@ import {
 
 import Login from '../../components/Login/Login';
 import Register from '../../components/Register/Register';
+import Forgot from '../../components/Forgot/Forgot';
 
 // import { createQuestions, updateResult } from '../actions';
 // import QuestionList from '../components/QuestionList';
@@ -35,7 +36,7 @@ export class Main extends Component {
 						<Col xs={12} sm={8} smOffset={2} md={6} mdOffset={3}
 							className={style.control + ' ' + utilStyle['z-depth-1']}>
 
-							<Register />
+							<Forgot />
 
 						</Col>
 					</div>

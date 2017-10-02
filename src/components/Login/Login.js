@@ -18,8 +18,10 @@ export default class Login extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			email: '',
-			pass: ''
+			payload: {
+				email: '',
+				pass: '',
+			}
 		};
 
 		this.handleChangeEmail = this.handleChangeEmail.bind(this);
@@ -29,13 +31,16 @@ export default class Login extends Component {
 
 	handleTextInput(e) {
 		this.setState({
-			[e.target.controlId]: e.target.value
+			payload: {
+				...this.state.payload,
+				[e.target.controlId]: e.target.value,
+			}
 		});
 	}
 
 	handleSubmit() {
 		event.preventDefault();
-		alert('Login as: ' + this.state.email);
+		alert('Login as: ' + this.state.payload.email);
 	}
 
 	render() {
@@ -56,7 +61,7 @@ export default class Login extends Component {
 					>
 						<ControlLabel className={utilStyle.weight__light}>Email address</ControlLabel>
 						<FormControl
-							type="text"
+							type="email"
 							placeholder="john.d@domain.com"
 							required
 							onChange={this.handleChangeEmail}

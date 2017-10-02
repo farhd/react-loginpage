@@ -5,16 +5,16 @@ import {
 } from 'react-router-dom';
 import style from './style.scss';
 
-const Register = ({
+const Dialog = ({
 	headerText,
 	switchText,
-	switchLinkPath,
+	switchLinkPath = '/',
 	switchLinkText,
-	children
+	children,
 }) => {
 	return (
 		<div>
-			<div>
+			<div className={style.dialog__header}>
 				<span className={style.dialog__title}>
 					{headerText}
 				</span>
@@ -29,7 +29,7 @@ const Register = ({
 	);
 };
 
-Register.propTypes = {
+Dialog.propTypes = {
 	headerText: PropTypes.any.isRequired,
 	switchText: PropTypes.string,
 	switchLinkPath: PropTypes.string,
@@ -37,4 +37,4 @@ Register.propTypes = {
 	children: PropTypes.any.isRequired,
 };
 
-export default Register;
+export default Dialog;

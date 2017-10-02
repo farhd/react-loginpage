@@ -15,7 +15,7 @@ export default class Register extends Component {
 		super(props);
 		this.state = {
 			withEmail: false,
-			submitData: {
+			payload: {
 				firstName: '',
 				lastName: '',
 				email: '',
@@ -38,13 +38,16 @@ export default class Register extends Component {
 
 	handleInput(e) {
 		this.setState({
-			[e.target.id]: e.target.value
+			payload: {
+				...this.state.payload,
+				[e.target.id]: e.target.value
+			}
 		});
 	}
 
 	handleSubmit(e) {
 		e.preventDefault();
-		alert('Register as: ' + this.state.email);
+		alert('Register as: ' + this.state.payload.email);
 	}
 
 	render() {
@@ -81,7 +84,7 @@ export default class Register extends Component {
 				<FormGroup controlId="email">
 					<ControlLabel className={utilStyle.weight__light}>Email address</ControlLabel>
 					<FormControl
-						type="text"
+						type="email"
 						placeholder="john.d@domain.com"
 						required
 						value={this.state.email}
