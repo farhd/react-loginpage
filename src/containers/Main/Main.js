@@ -35,7 +35,7 @@ export class Main extends Component {
 						<Col xs={12} sm={8} smOffset={2} md={6} mdOffset={3}
 							className={style.control + ' ' + utilStyle['z-depth-1']}>
 
-							<Login />
+							<Register />
 
 						</Col>
 					</div>

@@ -13,7 +13,7 @@ import {
 	Link,
 } from 'react-router-dom';
 import dialogStyle from '../Dialog/style.scss';
-import * as utilStyle from '../../styles/utils.scss';
+import utilStyle from '../../styles/utils.scss';
 
 export default class Login extends React.Component {
 	constructor(props) {
@@ -28,14 +28,14 @@ export default class Login extends React.Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
-	handleChangeEmail(event) {
-		this.setState({email: event.target.value});
+	handleChangeEmail(e) {
+		this.setState({email: e.target.value});
 	}
-	handleChangePass(event) {
-		this.setState({pass: event.target.value});
+	handleChangePass(e) {
+		this.setState({pass: e.target.value});
 	}
 
-	handleSubmit(event) {
+	handleSubmit() {
 		event.preventDefault();
 		alert('Login as: ' + this.state.email);
 	}
