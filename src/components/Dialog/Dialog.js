@@ -31,9 +31,10 @@ const Register = ({
 
 Register.propTypes = {
 	headerText: PropTypes.any.isRequired,
-	switchText: PropTypes.string.isRequired,
-	switchLinkPath: PropTypes.string.isRequired,
-	switchLinkText: PropTypes.string.isRequired,
+	switchText: PropTypes.string,
+	switchLinkPath: PropTypes.string,
+	switchLinkText: PropTypes.string,
+	children: PropTypes.any.isRequired,
 };
 
 export default Register;

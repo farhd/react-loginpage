@@ -13,7 +13,7 @@ const Login = ({actionVerb = 'Log in'}) => {
 	return (
 		<div>
 			<div>
-				<Button bsSize="md" block
+				<Button block
 					className={style.social__btn + ' ' + style.google}>
 					<Icon name="google" className={style.social__icon} />
 					{actionVerb} with Google
@@ -21,7 +21,7 @@ const Login = ({actionVerb = 'Log in'}) => {
 			</div>
 
 			<div>
-				<Button bsSize="md" block
+				<Button block
 					className={style.social__btn + ' ' + style.linkedin}>
 					<Icon name="linkedin" className={style.social__icon} />
 					{actionVerb} with Linkedin
@@ -29,7 +29,7 @@ const Login = ({actionVerb = 'Log in'}) => {
 			</div>
 
 			<div>
-				<Button bsSize="md" block
+				<Button block
 					className={style.social__btn + ' ' + style.xing}>
 					<Icon name="xing" className={style.social__icon} />
 					{actionVerb} with Xing

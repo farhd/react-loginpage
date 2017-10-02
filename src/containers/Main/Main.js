@@ -16,7 +16,7 @@ import Register from '../../components/Register/Register';
 // import { createQuestions, updateResult } from '../actions';
 // import QuestionList from '../components/QuestionList';
 
-import * as utilStyle from '../../utils/utils.scss';
+import * as utilStyle from '../../styles/utils.scss';
 import * as style from './style.scss';
 
 export class Main extends Component {

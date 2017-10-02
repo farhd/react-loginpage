@@ -3,6 +3,10 @@ import React from 'react';
 import Dialog from '../Dialog/Dialog';
 import SocialButtons from '../Social-buttons/Buttons';
 import Separator from '../Separator/Separator';
+import {
+	FormGroup,
+	FormControl,
+} from 'react-bootstrap';
 
 const Register = () => {
 	return (
@@ -13,7 +17,10 @@ const Register = () => {
 			switchLinkText="Log in"
 		>
 			<SocialButtons actionVerb="Register" />
-			<Separator title="or" />
+
+      <Separator title="or" />
+
+
 		</Dialog>
 	);
 };
