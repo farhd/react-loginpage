@@ -18,7 +18,7 @@ const Header = () => {
 			<Navbar className={style.header}>
 				<Navbar.Header>
 					<Navbar.Brand>
-						<a href="#" className={style.logo}>
+						<a href="https://www.thehomelike.com/" className={style.logo}>
 							<img src={logo} alt="Homelike" className={style.logo__img} />
 						</a>
 					</Navbar.Brand>
@@ -40,7 +40,7 @@ const Header = () => {
 						</FormGroup>
 					</Navbar.Form>
 					<Nav pullRight>
-						<NavItem href="#" className={style.nav__link}>For Landlords</NavItem>
+						<NavItem href="https://www.thehomelike.com/landlords" className={style.nav__link}>For Landlords</NavItem>
 						<NavItem href="#" className={style.nav__link}>Log in</NavItem>
 						<NavDropdown
 							title="EN"

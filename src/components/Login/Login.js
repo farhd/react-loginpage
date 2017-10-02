@@ -12,10 +12,9 @@ import {
 import {
 	Link,
 } from 'react-router-dom';
-import dialogStyle from '../Dialog/style.scss';
 import utilStyle from '../../styles/utils.scss';
 
-export default class Login extends React.Component {
+export default class Login extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -28,11 +27,10 @@ export default class Login extends React.Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
-	handleChangeEmail(e) {
-		this.setState({email: e.target.value});
-	}
-	handleChangePass(e) {
-		this.setState({pass: e.target.value});
+	handleTextInput(e) {
+		this.setState({
+			[e.target.controlId]: e.target.value
+		});
 	}
 
 	handleSubmit() {
@@ -67,7 +65,7 @@ export default class Login extends React.Component {
 
 					<FormGroup
 						className="clearfix"
-						controlId="password"
+						controlId="pass"
 						required
 					>
 						<ControlLabel className={utilStyle.weight__light}>Password</ControlLabel>

@@ -1,9 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {
-	Link,
-} from 'react-router-dom';
-import {
 	Button,
 } from 'react-bootstrap';
 import Icon from 'react-fontawesome';
@@ -40,7 +37,7 @@ const Login = ({actionVerb = 'Log in'}) => {
 };
 
 Login.propTypes = {
-  actionVerb: PropTypes.string
+	actionVerb: PropTypes.string
 };
 
 export default Login;

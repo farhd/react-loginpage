@@ -1,5 +1,13 @@
-# react-quiz example
+# react-loginpage example
 based on [react-redux-jest-kit](https://github.com/trembacz/react-redux-jest-kit)
+
+Design based on [TheHomelike](https://app.thehomelike.com/login)
+
+Following parts were omitted:
+
+* i18n
+* City-search autocompletion (could be done with https://developers.teleport.org/api/getting_started/#search_name)
+* Intercom chat-widget
 
 ## Getting Started
 

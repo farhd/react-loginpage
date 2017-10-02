@@ -8,13 +8,9 @@ import {
 	ControlLabel,
 	Button,
 } from 'react-bootstrap';
-import {
-	Link,
-} from 'react-router-dom';
-import dialogStyle from '../Dialog/style.scss';
 import utilStyle from '../../styles/utils.scss';
 
-export default class Register extends React.Component {
+export default class Register extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -25,23 +21,30 @@ export default class Register extends React.Component {
 				email: '',
 				pass: '',
 				userType: '',
-				lang: '',
+				user_lang: '',
 			},
 		};
 
 		this.handleWithEmail = this.handleWithEmail.bind(this);
+		this.handleInput = this.handleInput.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
-	handleWithEmail(e) {
+	handleWithEmail() {
 		this.setState({
 			withEmail: !this.state.withEmail,
 		});
 	}
 
-	handleSubmit() {
-		event.preventDefault();
-		alert('Login as: ' + this.state.email);
+	handleInput(e) {
+		this.setState({
+			[e.target.id]: e.target.value
+		});
+	}
+
+	handleSubmit(e) {
+		e.preventDefault();
+		alert('Register as: ' + this.state.email);
 	}
 
 	render() {
@@ -53,59 +56,53 @@ export default class Register extends React.Component {
 		);
 		const regForm = () => (
 			<form onSubmit={this.handleSubmit}>
-				<FormGroup
-					controlId="email"
-				>
+				<FormGroup controlId="firstName">
 					<ControlLabel className={utilStyle.weight__light}>First name</ControlLabel>
 					<FormControl
 						type="text"
 						placeholder="John"
 						required
-						onChange={this.handleChangeEmail}
+						value={this.state.firstName}
+						onChange={this.handleInput}
 					/>
 				</FormGroup>
 
-				<FormGroup
-					controlId="email"
-				>
+				<FormGroup controlId="lastName">
 					<ControlLabel className={utilStyle.weight__light}>Last name</ControlLabel>
 					<FormControl
 						type="text"
 						placeholder="Doe"
 						required
-						onChange={this.handleChangeEmail}
+						value={this.state.lastName}
+						onChange={this.handleInput}
 					/>
 				</FormGroup>
 
-				<FormGroup
-					controlId="email"
-				>
+				<FormGroup controlId="email">
 					<ControlLabel className={utilStyle.weight__light}>Email address</ControlLabel>
 					<FormControl
 						type="text"
 						placeholder="john.d@domain.com"
 						required
-						onChange={this.handleChangeEmail}
+						value={this.state.email}
+						onChange={this.handleInput}
 					/>
 				</FormGroup>
 
-				<FormGroup
-					className="clearfix"
-					controlId="password"
-					required
-				>
+				<FormGroup controlId="pass">
 					<ControlLabel className={utilStyle.weight__light}>Password</ControlLabel>
 					<FormControl
 						type="password"
 						placeholder="********"
 						required
-						onChange={this.handleChange}
+						value={this.state.pass}
+						onChange={this.handleInput}
 					/>
 				</FormGroup>
 
 				<FormGroup controlId="user_type">
 					<ControlLabel className={utilStyle.weight__light}>User type</ControlLabel>
-					<FormControl componentClass="select">
+					<FormControl componentClass="select" onChange={this.handleInput}>
 						<option value="">Select user type</option>
 						<option value="tenant">Private tenant</option>
 						<option value="owner">Appartment owner / manager</option>
@@ -114,9 +111,9 @@ export default class Register extends React.Component {
 
 				<FormGroup controlId="user_lang">
 					<ControlLabel className={utilStyle.weight__light}>Language</ControlLabel>
-					<FormControl componentClass="select">
+					<FormControl componentClass="select" onChange={this.handleInput}>
 						<option value="en">English</option>
-						<option value="ger">Deusch</option>
+						<option value="ger">Deutsch</option>
 					</FormControl>
 				</FormGroup>
 
