@@ -55,13 +55,30 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
+        include: [
+					/bootstrap/,
+					/font-awesome/,
+				],
+				loader: ExtractTextPlugin.extract('css-loader?modules=false&importLoaders=1!postcss-loader')
+			},
+			{
+				test: /\.css$/,
+        exclude: [
+					/bootstrap/,
+					/font-awesome/,
+				],
 				loader: ExtractTextPlugin.extract('css-loader?modules=true&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader')
 			},
 			{
 				test: /\.scss$/,
 				loader: ExtractTextPlugin.extract('css-loader?modules=true&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass-loader!postcss-loader')
       },
-      // TODO: fonts extraction into /fonts
+
+      {
+        test: /\.(ttf|otf|eot|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file-loader?name=fonts/[name].[ext]'
+			},
+
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
         loaders: [
