@@ -1,7 +1,7 @@
 # react-loginpage example
 based on [react-redux-jest-kit](https://github.com/trembacz/react-redux-jest-kit)
 
-Design based on [TheHomelike](https://app.thehomelike.com/login)
+Design based on [Homelike](https://app.thehomelike.com/login)
 
 Following parts were omitted:
 
@@ -14,15 +14,15 @@ Following parts were omitted:
 **1. Clone the repository on your local machine by running:**
 
 ```bash
-git clone git@github.com:farhd/react-quiz.git
+git clone git@github.com:farhd/react-loginpage.git
 ```
 or
 ```bash
-git clone https://github.com/farhd/react-quiz.git
+git clone https://github.com/farhd/react-loginpage.git
 ```
 then
 ```bash
-cd react-quiz
+cd react-loginpage
 npm i && npm run start
 ```
 
