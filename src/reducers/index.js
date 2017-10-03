@@ -1,12 +1,8 @@
 import { combineReducers } from 'redux';
-import questions from './questions';
-import answers from './answers';
-import result from './result';
+import session from './session';
 
 const rootReducer = combineReducers({
-	questions,
-	answers,
-	result,
+	session
 });
 
 export default rootReducer;

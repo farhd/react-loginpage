@@ -37,8 +37,8 @@ export default class Login extends Component {
 		});
 	}
 
-	handleSubmit() {
-		event.preventDefault();
+	handleSubmit(e) {
+		e.preventDefault();
 		alert('Login as: ' + this.state.payload.email);
 	}
 

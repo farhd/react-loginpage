@@ -1,21 +1,16 @@
 import * as types from '../actions/types';
 
-const initialState = {};
+const initialState = {
+	lang: 'en'
+};
 
 export default function result(state = initialState, action) {
 	switch (action.type) {
-		case types.ANSWER_QUESTION:
-			const { qId, cId, isCorrect } = action;
+		case types.CHANGE_LANG:
 			return {
 				...state,
-				[qId]: {
-					cId,
-					isCorrect
-				}
+				lang: action.lang
 			};
-
-		case types.RESET_QUESTIONS:
-			return initialState;
 
 		default:
 			return state;

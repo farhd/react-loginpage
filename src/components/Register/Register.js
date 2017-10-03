@@ -105,7 +105,10 @@ export default class Register extends Component {
 
 				<FormGroup controlId="user_type">
 					<ControlLabel className={utilStyle.weight__light}>User type</ControlLabel>
-					<FormControl componentClass="select" onChange={this.handleInput}>
+					<FormControl
+						componentClass="select"
+						onChange={this.handleInput}
+						required>
 						<option value="">Select user type</option>
 						<option value="tenant">Private tenant</option>
 						<option value="owner">Appartment owner / manager</option>
@@ -114,7 +117,10 @@ export default class Register extends Component {
 
 				<FormGroup controlId="user_lang">
 					<ControlLabel className={utilStyle.weight__light}>Language</ControlLabel>
-					<FormControl componentClass="select" onChange={this.handleInput}>
+					<FormControl
+						componentClass="select"
+						onChange={this.handleInput}
+						required>
 						<option value="en">English</option>
 						<option value="ger">Deutsch</option>
 					</FormControl>
